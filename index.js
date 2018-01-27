@@ -1,4 +1,4 @@
-const promisify = require('util').promisify
+const {promisify} = require('es6-promisify')
 
 class PromiseModule {
   constructor (mod) {
@@ -13,9 +13,7 @@ const handler = {
     if (target.mod[name]) {
       let val
       if (typeof target.mod[name] === 'function') {
-        val = async (...args) => {
-          return promisify(cb => target.mod[name](...args, cb))()
-        }
+        val = (...args) => promisify(cb => target.mod[name](...args, cb))()
       } else {
         val = target.mod[name]
       }
