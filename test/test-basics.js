@@ -15,12 +15,16 @@ test('test basics', t => {
   ])
 })
 
-test('test error', t => {
+test('unknown property', t => {
   t.plan(2)
-  try {
-    console.log(promwrap(_module).notfound)
-  } catch (e) {
-    t.type(e, 'Error')
-    t.type(e.message, (`Module has no property named notfound`))
-  }
+  t.same(_module.foo, void 0)
+  let mod = promwrap(_module)
+  t.same(mod.foo, void 0)
+})
+
+test('unknown function', t => {
+  t.plan(2)
+  t.throws(() => _module.foo())
+  let mod = promwrap(_module)
+  t.throws(() => mod.foo())
 })

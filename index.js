@@ -20,7 +20,6 @@ const handler = {
       target.cache.set(name, val)
       return val
     }
-    throw new Error(`Module has no property named ${name}`)
   }
 }
 
