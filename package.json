@@ -1,7 +1,7 @@
 {
   "name": "promwrap",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Proxy-Powered Promisification for your Pleasure",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
