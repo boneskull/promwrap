@@ -28,3 +28,10 @@ test('unknown function', t => {
   let mod = promwrap(_module)
   t.throws(() => mod.foo())
 })
+
+test('falsy props', t => {
+  t.plan(1)
+  let mod = promwrap(_module)
+  _module.prop2 = false
+  t.same(mod.prop2, false)
+})

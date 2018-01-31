@@ -10,7 +10,7 @@ class PromiseModule {
 const handler = {
   get: (target, name) => {
     if (target.cache.has(name)) return target.cache.get(name)
-    if (target.mod[name]) {
+    if (name in target.mod) {
       let val
       if (typeof target.mod[name] === 'function') {
         val = (...args) => promisify(cb => target.mod[name](...args, cb))()
