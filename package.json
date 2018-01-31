@@ -14,7 +14,15 @@
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "keywords": [],
+  "keywords": [
+    "promise",
+    "wrapper",
+    "promisify",
+    "promises",
+    "callback",
+    "nodeback",
+    "promisifcation"
+  ],
   "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.mikealrogers.com)",
   "license": "Apache-2.0",
   "devDependencies": {
@@ -29,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikeal/promwrap.git"
+    "url": "https://github.com/boneskull/promwrap.git"
   }
 }
