@@ -12,7 +12,8 @@
     "precommit": "npm test",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "keywords": [
     "promise",
@@ -33,7 +34,8 @@
     "standard": "^10.0.2",
     "tap": "^10.7.1",
     "validate-commit-msg": "^2.14.0",
-    "semantic-release": "^7.0.2"
+    "semantic-release": "^12.4.1",
+    "travis-deploy-once": "^4.3.3"
   },
   "repository": {
     "type": "git",
